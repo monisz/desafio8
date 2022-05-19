@@ -26,6 +26,7 @@ class Container {
         }
     }
 
+    //Agregué este método para complementar el put por id
     async replaceById(id, data) {
         try {
             const content = await fs.promises.readFile(this.fileName, 'utf-8');

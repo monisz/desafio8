@@ -24,6 +24,7 @@ routerProducts.get('/agregar', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 })
 
+//Para obtener un producto según su id
 routerProducts.get('/:id', (req, res) => {
     const getProduct = async () => {
         const id = parseInt(req.params.id);
@@ -35,6 +36,7 @@ routerProducts.get('/:id', (req, res) => {
     getProduct();
 })
 
+//Para agregar un producto, y lo devuelve con su id
 routerProducts.post('/', uploader.single('archivoASubir'), (req, res) => {
     const newProduct = req.body;
     console.log(req.body)
@@ -45,6 +47,8 @@ routerProducts.post('/', uploader.single('archivoASubir'), (req, res) => {
     getProducts();
 });
 
+//Recibe y actualiza un producto por id,
+//como no pedía ninguna devolución, decidí que devuelva el producto completo
 routerProducts.put('/:id', (req, res) => {
     const updateProduct = async () => {
         const id = parseInt(req.params.id);
@@ -56,6 +60,7 @@ routerProducts.put('/:id', (req, res) => {
     updateProduct();
 });
 
+//Para borrar un producto según el id
 routerProducts.delete('/:id', (req, res) => {
     const deleteProduct = async () => {
         const id = parseInt(req.params.id);
@@ -66,6 +71,7 @@ routerProducts.delete('/:id', (req, res) => {
     deleteProduct();
 })
 
+//Devuelve todos los productos
 routerProducts.get('/', (req, res) => {
     const getProducts = async () => {
         const products = await fileName.getAll();
