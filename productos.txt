@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Secador GA.MA",
+    "price": 2000,
+    "thumbnail": "una imagen",
+    "id": 1
+  },
+  {
+    "title": "Planchita GA.MA",
+    "price": 5000,
+    "thumbnail": "otra imagen",
+    "id": 2
+  },
+  {
+    "title": "Cepillo GA.MA",
+    "price": 1000,
+    "thumbnail": "otra imagen",
+    "id": 3
+  }
+]
